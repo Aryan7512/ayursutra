@@ -4,7 +4,7 @@ A modern digital platform that bridges 5,000 years of Ayurvedic wisdom with cutt
 
 ## 🚀 Live Demo
 
-Visit the application at: `http://localhost:3001`
+Visit the application at: 'https://ayursutra-eta.vercel.app/'
 
 ## ✨ Key Features Implemented
 
