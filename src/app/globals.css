@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #006A4E;
+  --foreground: #4A5D23;
+  --dark-moss-green: #4A5D23;
+  --pakistan-green: #006A4E;
+  --cornsilk: #FFF8DC;
+  --earth-yellow: #E1A95F;
+  --tigers-eye: #E08D3C;
+  --white: #ffffff;
+  --light-cornsilk: #FFFEF7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-dark-moss-green: var(--dark-moss-green);
+  --color-pakistan-green: var(--pakistan-green);
+  --color-cornsilk: var(--cornsilk);
+  --color-earth-yellow: var(--earth-yellow);
+  --color-tigers-eye: var(--tigers-eye);
+  --color-white: var(--white);
+  --color-light-cornsilk: var(--light-cornsilk);
+  --color-primary: var(--pakistan-green);
+  --color-secondary: var(--dark-moss-green);
+  --color-accent: var(--tigers-eye);
+  --color-text-primary: var(--dark-moss-green);
+  --color-text-secondary: var(--pakistan-green);
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Legacy color mappings for backward compatibility */
+  --color-sage-green: var(--cornsilk); /* Changed to cornsilk for better background contrast */
+  --color-forest-green: var(--dark-moss-green); /* Dark text for light backgrounds */
+  --color-deep-forest: var(--dark-moss-green);
+  --color-bright-lime: var(--tigers-eye);
+  --color-light-sage: var(--light-cornsilk);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light-cornsilk);
+  color: var(--dark-moss-green);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ayurveda-gradient {
+  background: linear-gradient(135deg, var(--pakistan-green) 0%, var(--dark-moss-green) 100%);
+}
+
+.dosha-gradient {
+  background: linear-gradient(45deg, var(--tigers-eye) 0%, var(--earth-yellow) 50%, var(--pakistan-green) 100%);
+}
+
+/* Additional color classes for the new palette */
+.bg-dark-moss-green { background-color: var(--dark-moss-green); }
+.bg-pakistan-green { background-color: var(--pakistan-green); }
+.bg-cornsilk { background-color: var(--cornsilk); }
+.bg-earth-yellow { background-color: var(--earth-yellow); }
+.bg-tigers-eye { background-color: var(--tigers-eye); }
+.bg-light-cornsilk { background-color: var(--light-cornsilk); }
+
+.text-dark-moss-green { color: var(--dark-moss-green); }
+.text-pakistan-green { color: var(--pakistan-green); }
+.text-cornsilk { color: var(--cornsilk); }
+.text-earth-yellow { color: var(--earth-yellow); }
+.text-tigers-eye { color: var(--tigers-eye); }
+
+.border-dark-moss-green { border-color: var(--dark-moss-green); }
+.border-pakistan-green { border-color: var(--pakistan-green); }
+.border-earth-yellow { border-color: var(--earth-yellow); }
+.border-tigers-eye { border-color: var(--tigers-eye); }
+
+/* Enhanced gradients with new palette */
+.earth-gradient {
+  background: linear-gradient(135deg, var(--earth-yellow) 0%, var(--tigers-eye) 100%);
+}
+
+.nature-gradient {
+  background: linear-gradient(135deg, var(--cornsilk) 0%, var(--earth-yellow) 50%, var(--pakistan-green) 100%);
+}
+
+/* Contrast-safe text combinations */
+.text-on-light {
+  color: var(--dark-moss-green);
+}
+
+.text-on-dark {
+  color: var(--cornsilk);
+}
+
+.text-on-green {
+  color: var(--light-cornsilk);
+}
+
+.text-on-yellow {
+  color: var(--dark-moss-green);
+}
+
+/* Background-specific text color overrides for better readability */
+.bg-pakistan-green .text-forest-green {
+  color: var(--light-cornsilk) !important;
+}
+
+.bg-dark-moss-green .text-forest-green {
+  color: var(--light-cornsilk) !important;
+}
+
+.bg-earth-yellow .text-forest-green {
+  color: var(--dark-moss-green) !important;
+}
+
+.bg-tigers-eye .text-forest-green {
+  color: var(--dark-moss-green) !important;
 }
