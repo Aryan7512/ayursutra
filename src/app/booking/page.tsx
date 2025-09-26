@@ -5,7 +5,6 @@ import { useState } from 'react';
 import {
   Leaf,
   MapPin,
-  Calendar,
   Clock,
   User,
   Star,
@@ -13,7 +12,6 @@ import {
   Activity,
   Brain,
   Shield,
-  Filter,
   Search
 } from 'lucide-react';
 import Link from 'next/link';

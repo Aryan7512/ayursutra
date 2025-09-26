@@ -120,7 +120,7 @@ export default function Home() {
               About AyurSutra
             </h2>
             <p className="text-xl text-deep-forest max-w-4xl mx-auto leading-relaxed">
-              We're revolutionizing traditional Ayurvedic healthcare by creating the digital bridge
+              We&apos;re revolutionizing traditional Ayurvedic healthcare by creating the digital bridge
               that modernizes ancient healing practices without losing their cultural essence and authenticity.
             </p>
           </motion.div>
@@ -176,7 +176,7 @@ export default function Home() {
               The Science of Life
             </h2>
             <p className="text-xl text-forest-green max-w-4xl mx-auto leading-relaxed">
-              Ayurveda, literally meaning "knowledge of life," is the world's oldest holistic healing system,
+              Ayurveda, literally meaning &ldquo;knowledge of life,&rdquo; is the world&apos;s oldest holistic healing system,
               originating in India over 5,000 years ago.
             </p>
           </motion.div>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="bg-sage-green rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-deep-forest mb-4">Panchakarma Detox</h3>
                 <p className="text-deep-forest leading-relaxed">
-                  Panchakarma, meaning "five actions," is Ayurveda's premier detoxification and
+                  Panchakarma, meaning &ldquo;five actions,&rdquo; is Ayurveda&apos;s premier detoxification and
                   rejuvenation program that eliminates toxins, restores balance, and enhances vitality
                   through specialized therapeutic procedures.
                 </p>
@@ -227,7 +227,7 @@ export default function Home() {
               <div className="bg-sage-green rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-deep-forest mb-4">Modern Relevance</h3>
                 <p className="text-deep-forest leading-relaxed">
-                  In our fast-paced world, Ayurveda's holistic approach to prevention and healing
+                  In our fast-paced world, Ayurveda&apos;s holistic approach to prevention and healing
                   is more relevant than ever, offering sustainable solutions for chronic stress,
                   lifestyle disorders, and overall wellness.
                 </p>

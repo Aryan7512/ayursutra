@@ -282,7 +282,7 @@ export default function DashboardPage() {
             >
               <div className="flex items-center space-x-2 mb-4">
                 <Brain className="h-6 w-6 text-earth-yellow" />
-                <h2 className="text-lg font-bold">Today's {dominantDosha} Tips</h2>
+                <h2 className="text-lg font-bold">Today&apos;s {dominantDosha} Tips</h2>
               </div>
 
               <div className="space-y-3">

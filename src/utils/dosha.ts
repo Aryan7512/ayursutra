@@ -184,7 +184,7 @@ export function calculateDosha(responses: Record<string, 'vata' | 'pitta' | 'kap
   const constitution = getConstitutionDescription(vataPercentage, pittaPercentage, kaphaPercentage);
 
   // Generate personalized recommendations
-  const recommendations = getPersonalizedRecommendations(dominantDosha, vataPercentage, pittaPercentage, kaphaPercentage);
+  const recommendations = getPersonalizedRecommendations(dominantDosha);
 
   return {
     vataPercentage,
@@ -217,7 +217,7 @@ function getConstitutionDescription(vata: number, pitta: number, kapha: number):
   return `${dominant} Constitution`;
 }
 
-function getPersonalizedRecommendations(dominantDosha: string, vata: number, pitta: number, kapha: number): string[] {
+function getPersonalizedRecommendations(dominantDosha: string): string[] {
   const recommendations: string[] = [];
 
   switch (dominantDosha) {

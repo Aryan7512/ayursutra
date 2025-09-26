@@ -10,7 +10,14 @@ export default function AssessmentPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [responses, setResponses] = useState<Record<string, 'vata' | 'pitta' | 'kapha'>>({});
   const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState<any>(null);
+  const [results, setResults] = useState<{
+    vataPercentage: number;
+    pittaPercentage: number;
+    kaphaPercentage: number;
+    dominantDosha: string;
+    constitution: string;
+    recommendations: string[];
+  } | null>(null);
 
   const currentQuestion = ASSESSMENT_QUESTIONS[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / ASSESSMENT_QUESTIONS.length) * 100;
@@ -257,31 +264,31 @@ export default function AssessmentPage() {
             className="bg-sage-green rounded-2xl p-8 mb-8"
           >
             <h3 className="text-2xl font-bold text-deep-forest mb-4">
-              Understanding Your {DOSHA_DESCRIPTIONS[results.dominantDosha].name} Constitution
+              Understanding Your {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].name} Constitution
             </h3>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h4 className="font-bold text-deep-forest mb-2">Key Characteristics</h4>
                 <p className="text-deep-forest mb-4">
-                  {DOSHA_DESCRIPTIONS[results.dominantDosha].characteristics}
+                  {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].characteristics}
                 </p>
 
                 <h4 className="font-bold text-deep-forest mb-2">Physical Traits</h4>
                 <p className="text-deep-forest">
-                  {DOSHA_DESCRIPTIONS[results.dominantDosha].physicalTraits}
+                  {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].physicalTraits}
                 </p>
               </div>
 
               <div>
                 <h4 className="font-bold text-deep-forest mb-2">Mental Traits</h4>
                 <p className="text-deep-forest mb-4">
-                  {DOSHA_DESCRIPTIONS[results.dominantDosha].mentalTraits}
+                  {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].mentalTraits}
                 </p>
 
                 <h4 className="font-bold text-deep-forest mb-2">Elements</h4>
                 <p className="text-deep-forest">
-                  {DOSHA_DESCRIPTIONS[results.dominantDosha].element}
+                  {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].element}
                 </p>
               </div>
             </div>
