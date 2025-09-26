@@ -251,7 +251,7 @@ export default function AssessmentPage() {
                 Your dominant dosha is <span className="font-bold text-bright-lime">{results.dominantDosha.toUpperCase()}</span>
               </p>
               <div className={`inline-block px-6 py-3 rounded-full bg-gradient-to-r ${getDoshaColor(results.dominantDosha)} text-white font-semibold`}>
-                {DOSHA_DESCRIPTIONS[results.dominantDosha].name} Constitution
+                {DOSHA_DESCRIPTIONS[results.dominantDosha as keyof typeof DOSHA_DESCRIPTIONS].name} Constitution
               </div>
             </div>
           </motion.div>
