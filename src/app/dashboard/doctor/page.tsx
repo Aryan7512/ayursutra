@@ -1,6 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { Search, Calendar, BookOpen, Users, LogOut, Settings } from 'lucide-react'
+import { useState } from 'react'
 
 export default function DoctorDashboard() {
   const [doctor] = useState({
@@ -66,22 +65,22 @@ export default function DoctorDashboard() {
             </div>
 
             <div className="p-3 flex items-center space-x-3 hover:bg-gray-800 rounded-lg cursor-pointer">
-              <Calendar className="w-5 h-5" />
+              <span className="text-lg">📅</span>
               <span>Calendar</span>
             </div>
 
             <div className="p-3 flex items-center space-x-3 hover:bg-gray-800 rounded-lg cursor-pointer">
-              <BookOpen className="w-5 h-5" />
+              <span className="text-lg">📖</span>
               <span>Discovery</span>
             </div>
 
             <div className="p-3 flex items-center space-x-3 hover:bg-gray-800 rounded-lg cursor-pointer">
-              <Users className="w-5 h-5" />
+              <span className="text-lg">👥</span>
               <span>Community</span>
             </div>
 
             <div className="p-3 flex items-center space-x-3 hover:bg-gray-800 rounded-lg cursor-pointer">
-              <LogOut className="w-5 h-5" />
+              <span className="text-lg">🚪</span>
               <span>Sign Out</span>
             </div>
           </div>
@@ -99,7 +98,7 @@ export default function DoctorDashboard() {
         <div className="bg-white px-6 py-4 flex items-center justify-between border-b">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</span>
               <input
                 type="text"
                 placeholder="Search Institutions..."
@@ -114,7 +113,7 @@ export default function DoctorDashboard() {
             <div className="w-8 h-8 bg-purple-200 rounded-full flex items-center justify-center">
               <span className="text-purple-700 font-semibold">1</span>
             </div>
-            <Settings className="w-6 h-6 text-gray-600 cursor-pointer" />
+            <span className="text-xl cursor-pointer">⚙️</span>
           </div>
         </div>
 
